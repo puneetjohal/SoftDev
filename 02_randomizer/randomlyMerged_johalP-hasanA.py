@@ -35,4 +35,4 @@ def randomizer():
     #pick a random int in range 0 to the final index of list team
     y = random.randint(0,len(team)-1)
     #print the value (name) at the random index
-    print team[y] + ", from krew " + teamstr
+    print( team[y] + ", from krew " + teamstr)
