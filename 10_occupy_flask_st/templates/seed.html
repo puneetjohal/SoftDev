@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}}</title>
+	</head>
+	<body>
+		<h2>The lucky occupation is <i>{{val}}</i></h2>
+		<table border="1">
+			<tr>
+				<th>{{head0}}</th>
+				<th>{{head1}}</th>
+      </tr>
+		  {%for line in dict%}
+			  <tr>
+				  <td>{{line}}</td>
+				  <td>{{dict[line]}}</td>
+			  </tr>
+		  {% endfor %}
+		</table>
+	</body>
+</html>
