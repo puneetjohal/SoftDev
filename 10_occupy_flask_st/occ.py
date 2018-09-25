@@ -11,10 +11,10 @@ app = Flask(__name__)
 #parse through the file
 file = open('occupations.csv', 'r')  #open the file in read mode
 raw = file.read()           #get the text
-lst = raw.split("\n")      #split on new lines
+lst = raw.split("\n")      #split on new lines #lst = list of lines
 
 #separate jobs from percentages
-cnt = 0
+cnt = 0 #counter
 while cnt < len(lst):
     if '"' in lst[cnt]:
         lst[cnt] = lst[cnt].replace('"', '')
@@ -25,12 +25,13 @@ while cnt < len(lst):
 dict = {}
 cnt = 1
 while cnt < len(lst) - 2:
-    dict[lst[cnt][0]] = float(lst[cnt][1])
+    dict[lst[cnt][0]] = float(lst[cnt][1]) #Each even index element (job) becomes a key, 
+					   #and the odd index element right after it becomes the value
     cnt += 1
 
 #random job selection
 def randomJob():
-    keys = list(dict)
+    keys = list(dict) #returns list of all keys in dict
     return random.choice(keys)
 
 @app.route("/occupations")
