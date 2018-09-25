@@ -9,29 +9,33 @@ import random
 app = Flask(__name__)
 
 #parse through the file
-file = open('occupations.csv', 'r')  #open the file in read mode
-raw = file.read()           #get the text
-lst = raw.split("\n")      #split on new lines #lst = list of lines
+def parse(inputfile):
+    file = open(inputfile, 'r')  #open the file in read mode
+    raw = file.read()           #get the text
+    return raw.split("\n")      #split on new lines
 
 #separate jobs from percentages
-cnt = 0 #counter
-while cnt < len(lst):
-    if '"' in lst[cnt]:
-        lst[cnt] = lst[cnt].replace('"', '')
-    lst[cnt] = lst[cnt].rsplit(',', 1)
-    cnt += 1
+def separate(inputlist):
+    cnt = 0 #counter
+    while cnt < len(inputlist):
+        if '"' in inputlist[cnt]:
+            inputlist[cnt] = inputlist[cnt].replace('"', '')
+            inputlist[cnt] = inputlist[cnt].rsplit(',', 1)
+            cnt += 1
 
 #feed info into dictionary
-dict = {}
-cnt = 1
-while cnt < len(lst) - 2:
-    dict[lst[cnt][0]] = float(lst[cnt][1]) #Each even index element (job) becomes a key, 
-					   #and the odd index element right after it becomes the value
-    cnt += 1
+def listToDict(inputlist)
+    jobs = {}
+    cnt = 1 #counter
+    while cnt < len(inputlist) - 2:
+        jobs[inputlist[cnt][0]] = float(inputlist[cnt][1]) #Each even index element (job) becomes a key, 
+        #and the odd index element right after it becomes the value
+        cnt += 1
+    return jobs
 
 #random job selection
-def randomJob():
-    keys = list(dict) #returns list of all keys in dict
+def randomJob(dictionary):
+    keys = list(dictionary) #returns list of all keys in dict
     return random.choice(keys)
 
 @app.route("/occupations")
