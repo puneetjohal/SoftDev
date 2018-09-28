@@ -12,12 +12,18 @@ app = Flask(__name__)
 def redirect():
     return render_template ('woo.html')
 
-@app.route("/auth")
+@app.route("/auth", methods = ["GET","POST"])
 def authenticate():
-    print(app)
-    print(request)
-    print(request.args)
-    name = request.args['username']
+    #print(app)
+    #print(request)
+    #print(request.args)
+
+    if (request.method == "GET"):
+        name = request.args['username']
+    else:
+        name = "Nobody"
+        #name = request.args['username']
+    
     meth = request.method
     return '<h3> Have a blessed day, ' + name + '</h3> <br> Request method used: ' + meth
 
