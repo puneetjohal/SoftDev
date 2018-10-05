@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {% block title %}
+      Login
+      {% endblock %}
+    </title>
+  </head>
+  <body>
+    <h1>
+    {% set msgs = get_flashed_messages() %}
+	    {% for each in msgs %}
+		    {{each}}
+		    <br>
+	    {% endfor %}
+    {% block content %}
+    </h1>
+    <form action = "/auth" method = "POST">
+      <p> Username: </p>
+      <input type = "text" name = "username"> <br>
+      <p> Password: </p>
+      <input type = "text" name = "password"> <br><br>
+      <input type = "submit" name "sub1">
+    </form>
+    {% endblock %}
+    {% block footer %}
+    <p>
+	  &copy; Copyright 2018 by PJ
+    </p>
+	  {% endblock %}
+  </body>
+</html>
