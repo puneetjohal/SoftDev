@@ -54,6 +54,9 @@ with open("./data/peeps.csv") as csvfile:
         c.execute(command)
         #print(row['name'], row['age'], row['id'])
 
+#-------------------------------------------------------------------------------
+#start of k17
+
 #SEARCHING THROUGH TABLES
 command = "SELECT id, mark FROM courses WHERE id > 0"
 cur = c.execute(command)
@@ -100,6 +103,23 @@ for element in alldata:
     average = element[1]
     command = 'INSERT INTO peeps_avg VALUES(\"' + str(ID) + '\", \"' + str(average) + '\")'
     c.execute(command)
+
+#FUNCTION FOR ADDING ROWS INTO THE COURSES TABLES
+def addRow(code,mark,id):
+    command = 'INSERT INTO courses VALUES(\"' + str(code) + '\", \"' + str(mark) + '\", \"' + str(id) + '\")'
+    c.execute(command)
+
+''' test pf addrow
+addRow("health",64,11)
+addRow("apmando",89,11)
+addRow("econ",92,11)
+command = 'SELECT * FROM courses;'
+cur = c.execute(command)
+all = cur.fetchall()
+print ("\n\n\nCourses table post additions")
+for row in all:
+    print (row[0], row[1], row[2])
+'''
 
 #==========================================================
 
