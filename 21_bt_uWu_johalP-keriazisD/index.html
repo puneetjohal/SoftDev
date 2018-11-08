@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+        <title>Boots</title>
+        <style>
+          .content {
+            padding: 15px;
+          }
+          .image {
+            object-fit: cover;
+            width: 200px;
+            height: 200px;
+            transition: .5s ease;
+            backface-visibility: hidden;
+          }
+          .fadein {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+          }
+          .text {
+            opacity: 0;
+            font-size: 16px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+          }
+          .content:hover .image {
+            opacity: 0.3;
+          }
+          .content:hover .fadein {
+            opacity: 1;
+          }
+          .content:hover .text {
+            opacity: 1;
+          }
+        </
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            Home <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="#">Click me</a>
+                          <a class="dropdown-item" href="#">No me</a>
+                          <a class="dropdown-item" href="#">No you</a>
+                        </div>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Unaccesable</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="container">
+          <div class="row" style="padding: 15px;">
+            <div class="col-lg-1 divide"></div>
+            <div class="col-lg-4 content">
+              <img src="http://dmeszqrvxc7wa.cloudfront.net/images/product/new/medium/11821006.jpg" class="image" style="float: right;">
+                <div class="fadeIn">
+                  <div class="text">
+                    Docs: </br> The iconic
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-2 divide"></div>
+            <div class="col-lg-4 content">
+              <img src="https://n.nordstrommedia.com/id/98cc25bd-e19f-4b11-a5d7-c38ecb390fbd.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838&quality=70" class="image" style="float: left;">
+                <div class="fadeIn">
+                  <div class="text">
+                    Hunter: </br> Trendy
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-1 divide"></div>
+          </div>
+          <div class="row" style="padding: 15px;">
+            <div class="col-lg-1 divide"></div>
+            <div class="col-lg-4 content">
+              <img src="https://cdni.llbean.net/is/image/wim/175052_1914_42?wid=190&hei=219&defaultImage=llbstage/A0211793_2" class="image" style="float: right;">
+                <div class="fadeIn">
+                  <div class="text">
+                    L.L.Bean: </br> Useful
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-2 divide"></div>
+            <div class="col-lg-4 content">
+              <img src="https://dsw.scene7.com/is/image/DSWShoes/359006_210_ss_01?$pdp-image$" class="image" style="float: left;">
+                <div class="fadeIn">
+                  <div class="text">
+                    Timbs: </br> Overrated
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-1 divide"></div>
+          </div>
+        </div>
+
+        <div class="contaner-fluid" style="background-color: lightgrey;">
+            <blockquote class="blockquote">
+                <p class="mb-0">
+                    I'm dreaming of a white Christmas
+                </p>
+                <footer class="blockquote-footer">
+                    Someone who owns a pair of boots
+                    <cite title="foo">Foogle</cite>
+                </footer>
+            </blockquote>
+        </div>
+
+    </body>
+</html>
