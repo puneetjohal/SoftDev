@@ -43,51 +43,70 @@
           .content:hover .text {
             opacity: 1;
           }
+
+          .guide {
+            padding: 15px;
+            margin: 0 auto;
+            max-width: 600px;
+          }
+
+          .disp {
+            padding: 30px 15px 15px 15px;
+            margin: 0 auto;
+            text-align: center;
+          }
         </
         </style>
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">
-                            Home <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
 
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Click me</a>
-                          <a class="dropdown-item" href="#">No me</a>
-                          <a class="dropdown-item" href="#">No you</a>
-                        </div>
-                      </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Unaccesable</a>
-                    </li>
-                </ul>
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://getbootstrap.com/">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Click me</a>
+                  <a class="dropdown-item" href="#">No me!</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">I'm special</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled Link</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Looking for something?" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
         </nav>
 
+        <div class="guide">
+          <h1 class="display-4" style="text-align: center;">Welcome to Team uWu's Bootstap Demo</h1>
+          <p>Hello all! We hope that our webpage is able to leave you with a better understanding of the design capabilities of the bootstrap framework. Here are a few things you can try:</p>
+          <ul>
+            <li>Resizing the browser (CTRL + or CTRL -)</li>
+            <li>Clicking through the navbar</li>
+            <li>Hovering over the images below with your mouse</li>
+            <li>Clicking on the different buttons below</li>
+          </ul>
+        </div>
 
         <div class="container">
           <div class="row" style="padding: 15px;">
@@ -117,7 +136,7 @@
               <img src="https://cdni.llbean.net/is/image/wim/175052_1914_42?wid=190&hei=219&defaultImage=llbstage/A0211793_2" class="image" style="float: right;">
                 <div class="fadeIn">
                   <div class="text">
-                    L.L.Bean: </br> Useful
+                    L.L.Bean: </br> Wholesome
                   </div>
                 </div>
             </div>
@@ -134,7 +153,58 @@
           </div>
         </div>
 
-        <div class="contaner-fluid" style="background-color: lightgrey;">
+        <div class="disp" style="padding-top: 30px">
+          <p>Here are a few examples of buttons:<p>
+          <button type="button" class="btn btn-outline-primary">Primary</button>
+          <button type="button" class="btn btn-outline-secondary">Secondary</button>
+          <button type="button" class="btn btn-outline-success">Success</button>
+          <button type="button" class="btn btn-outline-danger">Danger</button>
+          <button type="button" class="btn btn-outline-warning">Warning</button>
+          <button type="button" class="btn btn-outline-info">Info</button>
+          <button type="button" class="btn btn-outline-light">Light</button>
+          <button type="button" class="btn btn-outline-dark">Dark</button>
+        </div>
+
+        <div class="disp">
+          <p>Big Button:</p>
+          <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+        </div>
+
+        <div class="disp">
+          <p>Small Button:</p>
+          <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+        </disp>
+
+        <div class="disp">
+          <p>Block Level Button (spans full width of the container):</p>
+          <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+        </div>
+
+        <div class="disp">
+          <p>Disabled Button:</p>
+          <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+        </div>
+
+        <div class="disp">
+          <p>Button Group:</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Left</button>
+            <button type="button" class="btn btn-secondary">Middle</button>
+            <button type="button" class="btn btn-secondary">Right</button>
+          </div>
+        </div>
+
+        <div class="disp" style="max-width: 800px;">
+          <div class="alert alert-info" role="alert">
+            A simple info alert—check it out!
+          </div>
+        </div>
+
+        <div class="guide" style="text-align: left;">
+          <p>The following is a blockquote in a full-width (or fluid) container that will automatically span the entire width of your screen, even when zooming in or out.</p>
+        </div>
+
+        <div class="contaner-fluid" style="background-color: lightgrey; text-align: left;">
             <blockquote class="blockquote">
                 <p class="mb-0">
                     I'm dreaming of a white Christmas
