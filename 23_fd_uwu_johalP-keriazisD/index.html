@@ -1,0 +1,296 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <div class="nav">
+      <ul class="menu">
+        <li class="is-active"><a>Home</a></li>
+        <li><a>XY Grid</a></li>
+        <li><a>Typography</a></li>
+        <li><a>Control</a></li>
+        <li><a>Navbar</a></li>
+      </ul>
+    </div>
+
+    <div id="intro">
+      <h1>Team uWu's Foundation Demo</h1>
+      <p>Welcome to our Foundation demo! Here we will demonstrate some of the useful capabilities of the Foundation front-end framework. The easiest way to test out these features for yourself is to copy the following CDN link into the head of your HTML file:</p>
+      <br>
+      <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css"&gt;</code>
+      <br>
+    </div>
+
+    <hr>
+    <br>
+
+    <div id="seperator">
+      <h2>Key Features of Foundation</h2><br>
+    </div>
+
+    <div class="tutorial">
+      <h3>XY Grid</h3>
+      <p>The XY Grid allows for better vertical and horizontal alignment of objects. The following is an example of the XY Grid:</p>
+
+      <div class="grid-x grid-margin-x">
+        <div class="cell">full width cell</div>
+      </div>
+      <div class="grid-x grid-margin-x">
+        <div class="cell small-6">6 cells</div>
+        <div class="cell small-6">6 cells</div>
+      </div>
+      <div class="grid-x grid-margin-x">
+        <div class="cell small-3">3 cells</div>
+        <div class="cell small-3">3 cells</div>
+        <div class="cell small-3">3 cells</div>
+        <div class="cell small-3">3 cells</div>
+      </div>
+      <div class="grid-x grid-margin-x">
+        <div class="cell small-1">1 cell</div>
+        <div class="cell small-2">2 cells</div>
+        <div class="cell small-3">3 cells</div>
+        <div class="cell small-6">6 cells</div>
+      </div>
+
+      <br>
+      <p>Each row contains a maximum of 12 cells. Extra cells will overflow onto the next row. Gutters can be added by setting <code>grid-margin-x</code> or <code>grid-padding-x</code>. You can also control the size of the cells and how many cells will display per row on small, medium, or large screens. Resize your browser window (<kbd>CTRL +</kbd> or <kbd>CTRL -</kbd>) to see this effect on the grid below.</p>
+
+      <div class="grid-x grid-margin-x">
+        <div class="cell small-6 medium-8 large-2">cell</div>
+        <div class="cell small-6 medium-4 large-10">cell</div>
+      </div>
+
+      <br>
+      <p>You can also create vertical grids. You must explicitly declare the height of vertical grids.</p>
+      <div class="grid-y grid-margin-y" style="height: 300px;">
+        <div class="cell small-3">cell</div>
+        <div class="cell small-3">cell</div>
+        <div class="cell small-6">cell</div>
+      </div>
+    </div>
+
+    <hr>
+    <br><br>
+
+    <div class="tutorial">
+      <h3>Typography</h3>
+      <p>Foundation gives us access to many cool new features to customize text on webpages. The following are a few examples:</p>
+
+      <dl>
+
+          <dt>Small Header Segments</dt>
+          <dd>
+            <p>You can enclose header text in a <code>&lt;small&gt;</code> tag to have it appear inline with the header, but in a smaller font with a lighter color.</p>
+            <h3>Foundation Demo <small>by Team uWu</small></h3>
+          </dd>
+
+          <dt>Dividers</dt>
+          <dd>
+            <p>You can use <code>&lt;hr&gt;</code> to indicate a thematic break between paragraphs.</p>
+            <hr>
+            <br>
+          </dd>
+
+          <dt>Definition Lists</dt>
+          <dd>
+            <p>These are used to display name-value pairs. A <code>&lt;dl&gt;</code> tag is used to start the list, terms are enclosed in <code>&lt;dt&gt;</code> tags, and definitions are enclosed in <code>&lt;dd&gt;</code> tags. In fact, this list is a defintion list!</p>
+            <dl>
+              <dt>Thluffy Clyde Sinclair</dt>
+              <dd>A wholesome CS mascot and icon.</dd>
+              <dt>Wig</dt>
+              <dd>Snatched.</dd>
+            </dl>
+          </dd>
+
+          <dt>Blockquotes</dt>
+          <dd>
+            <p>These are used to format quotes. Quotes are enclosed in <code>&lt;blockquote&gt;</code> tags, and within those tags, the source is encloced in <code>&lt;cite&gt;</code> tags.</p>
+            <blockquote>
+              No hablo queso.
+              <cite>Topher Brown Mykolyk</cite>
+            </blockquote>
+          </dd>
+
+          <dt>Abbreviations</dt>
+          <dd>
+            <p>You can enclose text in <code>&lt;abbr&gt;</code> tags to have it display the full term when you hover over it with your mouse. The <code>title</code> attribute of this tag must be set equal to the term you want displayed upon hovering.</p>
+            <abbr title="Cascading Style Sheets">CSS</abbr>
+            <br><br>
+          </dd>
+
+          <dt>Code</dt>
+          <dd>
+            <p>You can display code by enclosing it in <code>&lt;code&gt;</code> tags. In order to display opening and closeing arrow brackets properly, you must use <code>&amplt;</code> for opening brakets and <code>&ampgt;</code> for closing brackets.</p>
+            <code>&lt;!DOCTYPE html&gt;</code>
+            <br><br>
+          </dd>
+
+          <dt>Keystrokes</dt>
+          <dd>
+            <p>You can display keystrokes by enclosing them in <code>&lt;kbd&gt;</code> tags.</p>
+            <kbd>Ctrl+Alt+Del</kbd>
+            <br><br>
+          </dd>
+
+        </dl>
+
+    </div>
+
+    <hr>
+    <br><br>
+
+    <div class="tutorial">
+      <h3>Control</h3>
+      <p>Control features improve the user interface of websites, making it easier for users to interact with the site. The following are a few of the control features that come with Foundations:</p>
+
+      <dl>
+
+        <dt>Buttons</dt>
+        <dd>
+          <p>Buttons can be used to link users to different webpages or to allow them to perform an action that changes something on the website. Try hovering over or clicking on some of the following buttons.</p>
+
+          <dl>
+            <dt>Linked button</dt>
+            <dd>
+              <a href="https://foundation.zurb.com/sites/docs/button.html" class="button">Documentation</a>
+            </dd>
+            <dt>Buttons for performing actions</dt>
+            <dd>
+              <button type="button" class="success button">Submit</button>
+              <button type="button" class="alert button">Cancel</button>
+            </dd>
+            <dt>Different sized buttons</dt>
+            <dd>
+              <a class="button tiny" href="#">Tiny</a>
+              <a class="button small" href="#">Small</a>
+              <a class="button" href="#">Basic</a>
+              <a class="button large" href="#">Large</a>
+              <a class="button expanded" href="#">Full Width</a>
+            </dd>
+            <dt>Different colored buttons</dt>
+            <dd>
+              <a class="button primary" href="#">Primary</a>
+              <a class="button secondary" href="#">Secondary</a>
+              <a class="button success" href="#">Success</a>
+              <a class="button alert" href="#">Alert</a>
+              <a class="button warning" href="#">Warning</a>
+            </dd>
+            <dt>Hollow style buttons</dt>
+            <dd>
+              <button class="hollow button" href="#">Primary</button>
+              <button class="hollow button secondary" href="#">Secondary</button>
+              <button class="hollow button success" href="#">Success</button>
+              <button class="hollow button alert" href="#">Alert</button>
+              <button class="hollow button warning" href="#">Warning</button>
+              <button class="hollow button" href="#" disabled>Disabled</button>
+            </dd>
+            <dt>Clear buttons</dt>
+            <dd>
+              <a class="clear button" href="#">Primary</a>
+              <a class="clear button secondary" href="#">Secondary</a>
+              <a class="clear button success" href="#">Success</a>
+              <a class="clear button alert" href="#">Alert</a>
+              <a class="clear button warning" href="#">Warning</a>
+              <a class="clear button" href="#" disabled>Disabled</a>
+            </dd>
+            <dt>Dropdown button</dt>
+            <dd>
+              <button class="dropdown button">Dropdown</button>
+            </dd>
+            <dt>Button group</dt>
+            <dd>
+              <div class="button-group">
+                <a class="button">Un</a>
+                <a class="button">Duex</a>
+                <a class="button">Trois</a>
+              </div>
+            </dd>
+          </dl>
+
+        </dd>
+
+        <dt>Switches</dt>
+        <dd>
+          <p>Switches allow users to toggle between different options. Try clicking on the following switches.</p>
+
+          <dl>
+            <dt>Basic switch</dt>
+            <dd>
+              <div class="switch">
+                <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="exampleSwitch">
+                  <span class="show-for-sr">Download Kittens</span>
+                </label>
+              </div>
+            </dd>
+            <dt>Radio switches</dt>
+            <dd>
+              <div class="switch">
+                <input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+                <label class="switch-paddle" for="exampleRadioSwitch1">
+                  <span class="show-for-sr">Bulbasaur</span>
+                </label>
+              </div>
+              <div class="switch">
+                <input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+                <label class="switch-paddle" for="exampleRadioSwitch1">
+                  <span class="show-for-sr">Bulb</span>
+                </label>
+              </div>
+              <div class="switch">
+                <input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+                <label class="switch-paddle" for="exampleRadioSwitch1">
+                  <span class="show-for-sr">asaur</span>
+                </label>
+              </div>
+            </dd>
+            <dt>Inner labels</dt>
+            <dd>
+              <p>Will I pass calc?</p>
+              <div class="switch large">
+                <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="yes-no">
+                  <span class="show-for-sr">Will I pass calc?</span>
+                  <span class="switch-active" aria-hidden="true">No</span>
+                  <span class="switch-inactive" aria-hidden="true">No</span>
+                </label>
+              </div>
+            </dd>
+          </dl>
+
+        </dd>
+
+      </dl>
+
+    </div>
+
+    <hr>
+    <br>
+
+    <div class="tutorial">
+      <h3>Navbar</h3>
+      <p>Adding a navbar is another cool feature of Foundation, though not much can be done without the use of javascript. We have a simple navbar at the <a href="#">top</a> of this page. We were able to create this by using the <code>&lt;ul&gt;</code> tag and setting its class attribute to "menu". Each navbar option is a link enclosed in a list element. The home option is highlighted because the class attribute of its <code>&lt;li&gt;</code> tag is set to "is-active".</p>
+    </div>
+
+    <hr>
+    <br>
+    <br>
+
+    <div class="tutorial">
+      <p>You can find all of the features above implemented in our source code (use <kbd>Ctrl + U</kbd> for quick access). You can also visit the <a href="https://foundation.zurb.com/sites/docs/">Foundation documentation</a> for more information on these or the many other features that Foundation has to offer!</p>
+    </div>
+
+
+  </body>
+
+</html>
