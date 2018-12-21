@@ -114,7 +114,7 @@ factButton.addEventListener( 'click', function(){
 var randList = document.createElement("ul");
 document.body.appendChild(randList);
 var randButton = document.createElement("button");
-randButton.innerHTML = "random star wars character list";
+randButton.innerHTML = "star wars button";
 document.body.appendChild(randButton);
 
 //clicking the rand button adds random star wars character to the ul
