@@ -64,6 +64,14 @@ var fact = (n) => {
   return n * fact(n-1);
 }
 
+//randomStarWars
+var characters = ["luke", "leia", "han", "r2d2", "c3po", "anakin", "obi-wan", "yoda", "darth vader", "chewbacca", "darth maul", "padme"];
+
+var randomStarWars = () => {
+  var index = Math.floor(Math.random() * characters.length);
+  return characters[index];
+}
+
 
 //getting elements and setting vars
 var fibButton = document.getElementById("fb");
@@ -86,12 +94,11 @@ fibButton.addEventListener( 'click', function(){
 
 
 //adding a new list and button to the HTML
-var body = document.getElementsByTagName("body");
 var factList = document.createElement("ol");
-list.appendChild(factList);
+document.body.appendChild(factList);
 var factButton = document.createElement("button");
 factButton.innerHTML = "fact button";
-list.appendChild(factButton);
+document.body.appendChild(factButton);
 
 //clicking the fact button adds list elements with the next fact value
 factButton.addEventListener( 'click', function(){
@@ -99,4 +106,20 @@ factButton.addEventListener( 'click', function(){
   newListElement.innerHTML = fact(factCount);
   factList.appendChild(newListElement);
   factCount++;
+});
+
+
+
+//adding a new list and button to the HTML
+var randList = document.createElement("ul");
+document.body.appendChild(randList);
+var randButton = document.createElement("button");
+randButton.innerHTML = "random star wars character list";
+document.body.appendChild(randButton);
+
+//clicking the rand button adds random star wars character to the ul
+randButton.addEventListener( 'click', function(){
+  var newListElement = document.createElement("li");
+  newListElement.innerHTML = randomStarWars();
+  randList.appendChild(newListElement);
 });
