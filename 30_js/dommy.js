@@ -83,6 +83,16 @@ fibButton.addEventListener( 'click', function(){
   fibCount++;
 });
 
+
+
+//adding a new list and button to the HTML
+var body = document.getElementsByTagName("body");
+var factList = document.createElement("ol");
+list.appendChild(factList);
+var factButton = document.createElement("button");
+factButton.innerHTML = "fact button";
+list.appendChild(factButton);
+
 //clicking the fact button adds list elements with the next fact value
 factButton.addEventListener( 'click', function(){
   var newListElement = document.createElement("li");
